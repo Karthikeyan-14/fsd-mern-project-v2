@@ -1,0 +1,136 @@
+.admin-page {
+  margin-top: 5rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1.5rem;
+  color: #e5e7eb; /* text readable on dark bg */
+}
+
+/* Summary cards row */
+.admin-page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.admin-card {
+  padding: 1.5rem 1.25rem;
+  text-align: left;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.admin-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.admin-card p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.admin-card .btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.95);
+}
+
+/* Requests box */
+
+.admin-requests-container {
+  margin: 2.5rem 0 1.5rem;
+  border-radius: 1.1rem;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1.5rem 1.75rem;
+  max-width: 900px;
+}
+
+.admin-requests-container h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.admin-requests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Each request row */
+.admin-request {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+}
+
+.admin-request span {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.admin-request span b {
+  font-weight: 600;
+  color: #bfdbfe;
+}
+
+.admin-request-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.admin-request-actions button {
+  width: 7rem;
+}
+
+/* When there are no requests */
+.admin-requests p {
+  color: #9ca3af;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .admin-requests-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.25rem;
+  }
+
+  .admin-request {
+    align-items: flex-start;
+  }
+
+  .admin-request-actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}
